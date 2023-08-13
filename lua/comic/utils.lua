@@ -2,7 +2,7 @@
 --       COLOR UTILITIES        --
 ---]]------------------------[[---
 
-local c = require("tone.colors")
+local c = require("comic.colors")
 
 local M = {}
 
@@ -12,7 +12,7 @@ local M = {}
 -- Convert RGB to Hex color.
 -- @param r Red value
 -- @param g Green value
--- @param b Blue value
+-- @param b Blue vaue
 -- @return HEX color, e.g. '#1E1E1E'
 local function RGB_to_Hex(r, g, b)
 	return "#" .. string.format("%02X%02X%02X", r, g, b)
