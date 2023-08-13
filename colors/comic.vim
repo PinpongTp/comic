@@ -32,7 +32,7 @@ let s:str="#cfe48c"
 let s:type="#ffee00"
 let s:var="#cee265"
 let s:warning="#FF678C"
-let s:warning2="#ffa366"
+let s:warning2="#e27e36"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg
 exe 'hi Cursor guifg='s:bg' guibg='s:fg
