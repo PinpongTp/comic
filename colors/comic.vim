@@ -13,7 +13,7 @@ let g:colors_name = "comic"
 
 
 " Define reusable colorvariables.
-let s:bg="#201721"
+let s:bg="#302632"
 let s:fg="#e3e3e3"
 let s:fg2="#d1d1d1"
 let s:fg3="#bfbfbf"
@@ -21,15 +21,15 @@ let s:fg4="#adadad"
 let s:bg2="#322a33"
 let s:bg3="#443c45"
 let s:bg4="#564f56"
-let s:keyword="#a758df"
+let s:keyword="#ca79ee"
 "let s:builtin="#813eb1"
 let s:builtin="#c29adf"
 "let s:const= "#e27e36"
-let s:const= "#e27e36"
+let s:const= "#f0a54d"
 let s:comment="#707070"
-let s:func="#44b94d"
-let s:str="#a8c865"
-let s:type="#d9ff00"
+let s:func="#92dc6b"
+let s:str="#cfe48c"
+let s:type="#ffee00"
 let s:var="#cee265"
 let s:warning="#fd1419"
 let s:warning2="#fd1419"
@@ -147,7 +147,6 @@ exe 'hi jsFunction guifg='s:keyword' gui=bold'
 exe 'hi htmlLink guifg='s:var' gui=underline'
 exe 'hi htmlStatement guifg='s:keyword
 exe 'hi htmlSpecialTagName guifg='s:keyword
-exe 'hi typescriptTypeParameter guifg=#FF00FF'
 
 " Markdown Highlighting
 exe 'hi mkdCode guifg='s:builtin
