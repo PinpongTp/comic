@@ -37,7 +37,6 @@ let s:warning2="#fd1419"
 exe 'hi Normal guifg='s:fg' guibg='s:bg
 exe 'hi Cursor guifg='s:bg' guibg='s:fg
 exe 'hi CursorLine  guibg='s:bg2 
-" CursorLine line แนวนอน
 exe 'hi CursorLineNr guifg='s:str' guibg='s:bg
 exe 'hi CursorColumn  guibg='s:bg2
 exe 'hi ColorColumn  guibg='s:bg
@@ -143,14 +142,7 @@ let g:go_highlight_variable_declarations  = 1
 " Javascript Highlighting
 exe 'hi jsBuiltins guifg='s:builtin
 exe 'hi jsFunction guifg='s:keyword' gui=bold'
-exe 'hi jsGlobalObjects guifg='s:type
-exe 'hi jsAssignmentExps guifg='s:var
-exe 'hi jsNull guifg='s:var
-exe 'hi jsxTag guifg='s:var
-exe 'hi jsxTagName guifg='s:var
 
-exe 'hi typescriptTypeParameter guifg='s:var
-exe 'hi typescriptTypeReference guifg='s:var
 " Html Highlighting
 exe 'hi htmlLink guifg='s:var' gui=underline'
 exe 'hi htmlStatement guifg='s:keyword
@@ -160,12 +152,5 @@ exe 'hi typescriptTypeParameter guifg=#FF00FF'
 " Markdown Highlighting
 exe 'hi mkdCode guifg='s:builtin
 
-exe 'hi link javaScriptIdentifier Type'
-exe 'hi link javaScriptDOMMethods Normal'
-exe 'hi link javaScriptDOMProperties Normal'
-exe 'hi link javaScriptNumber Number'
-exe 'hi link javaScriptParens Preproc'
-exe 'hi link javaScriptFuncArg Normal'
-exe 'hi javaScriptFuncDef ctermfg=168 ctermbg=NONE cterm=NONE guifg=#db6088 guibg=NONE gui=NONE'
 
 exe 'hi link typescriptTemplateSB Number'
