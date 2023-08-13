@@ -1,6 +1,6 @@
 " Vim color file
-" reykjavik
-" Created by  with ThemeCreator (https://github.com/mswift42/themecreator)
+" comic
+" Created by PinpongTp with ThemeCreator (https://github.com/mswift42/themecreator)
 
 hi clear
 
@@ -9,7 +9,7 @@ if exists("syntax on")
 endif
 
 set t_Co=256
-let g:colors_name = "commic"
+let g:colors_name = "comic"
 
 
 " Define reusable colorvariables.
@@ -71,7 +71,7 @@ exe 'hi ErrorMsg guifg='s:warning' guibg='s:bg2' gui=bold'
 exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2
 exe 'hi Float guifg='s:const
 exe 'hi Function guifg='s:func
-exe 'hi Identifier guifg='s:type'  gui=italic'
+exe 'hi Identifier guifg='s:fg'  gui=italic'
 exe 'hi Keyword guifg='s:keyword'  gui=bold'
 exe 'hi Label guifg='s:var
 exe 'hi NonText guifg='s:bg4' guibg='s:bg
