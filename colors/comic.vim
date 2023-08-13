@@ -31,8 +31,8 @@ let s:func="#92dc6b"
 let s:str="#cfe48c"
 let s:type="#ffee00"
 let s:var="#cee265"
-let s:warning="#fd1419"
-let s:warning2="#fd1419"
+let s:warning="#FF678C"
+let s:warning2="#ffa366"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg
 exe 'hi Cursor guifg='s:bg' guibg='s:fg
