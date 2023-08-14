@@ -10,6 +10,7 @@ local utils = require("comic.utils")
 c = colors.Dark
 c.base1 = c.purple
 c.base2 = c.green
+c.str = c.str
 if vim.opt.background:get() == "light" then
 	c = colors.Light
 end
@@ -72,7 +73,7 @@ local main_syntax = {
 	Tag = { fg = c.purple, gui = "bold" },
 	--Link = { fg = c.base1, sp = 'undercurl' },
 	--URL = { fg = c.base1, sp = 'undercurl' },
-	--Underlined = { fg = c.base1, sp = 'underline' },
+	Underlined = { sp = "underline" },
 
 	Comment = { fg = c.fg5, gui = "italic" },
 	CommentBold = { fg = c.fg5, gui = "bold" },
@@ -105,7 +106,7 @@ local main_syntax = {
 	Character = { fg = c.orange, gui = "bold" },
 	--SpecialChar = { fg = c.orange, gui = "bold" },
 
-	String = { fg = c.green2 },
+	String = { fg = c.str },
 	--StringDelimiter = { fg = c.green2 },
 
 	Special = { fg = c.fg },
@@ -207,6 +208,7 @@ utils.high_link("Todo", "TextWarningBold")
 
 -- Diff
 local diff = {
+	-- todo: check diff text in diff line again
 	diffLine = { fg = c.fg, bg = c.purple2 },
 	diffSubName = { fg = c.fg, bg = c.purple2 },
 
