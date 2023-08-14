@@ -158,38 +158,38 @@ local main_syntax = {
 	Exception = { fg = C.red },
 	Conditional = { fg = C.purple },
 
-	Variable = { fg = C.base2 },
-	VariableBuiltin = { fg = C.base2, gui = "bold" },
+	Variable = { fg = C.fg3 }, -- todo
+	VariableBuiltin = { fg = C.fg4 },
 	Constant = { fg = C.base, gui = "bold" },
 
 	Number = { fg = C.orange },
 	Float = { fg = C.orange },
-	--Boolean = { fg = C.orange },
-	--Enum = { fg = C.orange },
+	Boolean = { fg = C.orange },
+	Enum = { fg = C.orange },
 
 	Character = { fg = C.orange, gui = "bold" },
-	--SpecialChar = { fg = C.red, gui = "bold" },
+	SpecialChar = { fg = C.red, gui = "bold" },
 
 	String = { fg = C.str },
 	--StringDelimiter = { fg = C.red },
 
-	Special = { fg = C.fg },
+	Special = { fg = C.orange }, -- null
 	--SpecialBold = { fg = C.red, gui = "bold" },
 
-	--Field = { fg = C.red },
-	--Argument = { fg = C.red },
-	--Attribute = { fg = C.red },
-	Identifier = { fg = C.fg4, gui = "italic" },
-	Property = { fg = C.purple },
+	Field = { fg = C.red },
+	Argument = { fg = C.red },
+	Attribute = { fg = C.base1 },
+	Identifier = { fg = C.fg, gui = "italic" },
+	Property = { fg = C.fg }, -- todo
 	Function = { fg = C.fg },
-	--FunctionBuiltin = { fg = C.red, gui = "bold" },
-	--KeywordFunction = { fg = C.red, gui = "italic" },
-	--Method = { fg = C.red },
+	FunctionBuiltin = { fg = C.red, gui = "bold" },
+	KeywordFunction = { fg = C.red, gui = "italic" },
+	Method = { fg = C.red },
 
 	Type = { fg = C.yellow },
-	--TypeBuiltin = { fg = C.red, gui = "bold" },
-	--StorageClass = { fg = C.red, gui = "italic" },
-	--Class = { fg = C.red },
+	TypeBuiltin = { fg = C.red, gui = "bold" },
+	StorageClass = { fg = C.red, gui = "italic" },
+	Class = { fg = C.red },
 	Structure = { fg = C.green },
 	Typedef = { fg = C.purple },
 
@@ -361,3 +361,16 @@ utils.high_link("@type", "Structure")
 utils.high_link("@type.builtin", "Type")
 utils.high_link("@type.definition", "ErrorMsg")
 utils.high_link("@type.qualifier", "Keyword")
+
+utils.high_link("@function", "ErrorMsg")
+utils.high_link("@function.builtin", "ErrorMsg")
+utils.high_link("@function.call", "VariableBuiltin") -- @get
+utils.high_link("@function.macro", "VariableBuiltin")
+
+utils.high_link("@variable", "Variable")
+utils.high_link("@parameter", "Variable")
+utils.high_link("@attribute", "Attribute")
+
+utils.high_link("@property", "Property")
+utils.high_link("@variable.builtin", "VariableBuiltin") -- test
+utils.high_link("@symbol", "ErrorMsg")
