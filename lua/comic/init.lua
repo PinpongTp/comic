@@ -67,7 +67,7 @@ local general_ui = {
 	--TabLineSel = { fg = c.base2, bg = c.base8 },
 }
 utils.apply_highlight(general_ui)
-utils.high_link("Normal", "EndOfBuffer")
+--utils.high_link("Normal", "EndOfBuffer")
 
 -- Search, Highlight. Conceal, Messages
 local search_high_ui = {
