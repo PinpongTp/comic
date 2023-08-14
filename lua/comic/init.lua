@@ -71,9 +71,9 @@ utils.high_link("Normal", "EndOfBuffer")
 
 -- Search, Highlight. Conceal, Messages
 local search_high_ui = {
-	Search = { bg = utils.Mix(C.base1, C.bg, 0.7), gui = "italicbold" },
-	--Substitute = { fg = c.aubergine, gui = "strikethrough,bold" },
-	IncSearch = { bg = utils.Mix(C.red, C.bg, 0.7), gui = "bold" },
+	Search = { bg = utils.Mix(C.base1, C.bg, 0.7), gui = "italic" },
+	Substitute = { fg = C.red, gui = "strikethrough,bold" },
+	IncSearch = { fg = C.bg, bg = C.base2, gui = "bold" },
 	IncSearchCursor = { gui = "reverse" },
 
 	--Conceal = { fg = c.base6, gui = "none" },
