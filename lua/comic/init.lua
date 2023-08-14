@@ -7,12 +7,12 @@ local colors = require("comic.colors")
 local utils = require("comic.utils")
 
 -- Set dark or light color scheme, depending on VIM background setting
-c = colors.Dark
-c.base1 = c.purple
-c.base2 = c.green
-c.str = c.str
+C = colors.Dark
+C.base1 = C.purple
+C.base2 = C.green
+C.str = C.str
 if vim.opt.background:get() == "light" then
-	c = colors.Light
+	C = colors.Light
 end
 
 -- Enables pseudo-transparency for the popup-menu
@@ -22,34 +22,34 @@ end
 
 -- General UI
 local general_ui = {
-	Normal = { fg = c.fg, bg = c.bg },
+	Normal = { fg = C.fg, bg = C.bg },
 
 	-- Dropdowns
-	Pmenu = { fg = c.fg, bg = c.bg2 },
+	Pmenu = { fg = C.fg, bg = C.bg2 },
 	--PmenuSel = { fg = c.base8, bg = c.water }, -- update
-	PmenuSel = { bg = c.bg3 },
+	PmenuSel = { bg = C.bg3 },
 	--PmenuSbar = { fg = c.base2, bg = c.base7 },
 	--PmenuThumb = { bg = c.base4 },
 
 	--Visual = { bg = utils.Mix(c.sap, c.base8, 0.6) },
 	--VisualBold = { bg = c.sap, gui = "bold" },
 
-	LineNr = { fg = c.bg3, bg = c.bg },
-	Cursor = { bg = c.yellow },
-	CursorLine = { bg = c.bg2 },
-	CursorLineNr = { fg = c.green2 },
-	CursorColumn = { bg = c.bg },
+	LineNr = { fg = C.bg3, bg = C.bg },
+	Cursor = { bg = C.yellow },
+	CursorLine = { bg = C.bg2 },
+	CursorLineNr = { fg = C.green2 },
+	CursorColumn = { bg = C.bg },
 
 	--Folded = { fg = c.base5, bg = c.base4 },
-	FoldColumn = { fg = c.fg5, bg = c.bg },
-	SignColumn = { fg = c.fg5, bg = c.bg },
-	ColorColumn = { bg = c.bg },
+	FoldColumn = { fg = C.fg5, bg = C.bg },
+	SignColumn = { fg = C.fg5, bg = C.bg },
+	ColorColumn = { bg = C.bg },
 
 	--IndentGuide = { fg = c.base6 },
 	--IndentGuideEven = { fg = c.base6 },
 	--IndentGuideOdd = { fg = c.base6 },
 
-	StatusLine = { fg = c.fg2, bg = c.bg3 },
+	StatusLine = { fg = C.fg2, bg = C.bg3 },
 	--StatusLineNC = { fg = c.base5, bg = c.base7 },
 
 	--TermCursor = { fg = c.base1, gui = "reverse" },
@@ -57,9 +57,9 @@ local general_ui = {
 	--TermNormal = { fg = c.base1, bg = c.base8 },
 	--TermNormalNC = { fg = c.base1, bg = c.base8 },
 
-	WildMenu = { fg = c.green2, bg = c.bg },
+	WildMenu = { fg = C.green2, bg = C.bg },
 	--Separator = { fg = c.base1_alt },
-	VertSplit = { fg = c.bg2, bg = c.bg },
+	VertSplit = { fg = C.bg2, bg = C.bg },
 
 	--TabLineFill = { bg = c.base6 },
 	--TabLine = { fg = c.base3, bg = c.base6 },
@@ -70,61 +70,61 @@ utils.high_link("Normal", "EndOfBuffer")
 
 -- Main Syntax
 local main_syntax = {
-	Tag = { fg = c.purple, gui = "bold" },
+	Tag = { fg = C.purple, gui = "bold" },
 	--Link = { fg = c.base1, sp = 'undercurl' },
 	--URL = { fg = c.base1, sp = 'undercurl' },
 	Underlined = { sp = "underline" },
 
-	Comment = { fg = c.fg5, gui = "italic" },
-	CommentBold = { fg = c.fg5, gui = "bold" },
-	SpecialComment = { fg = c.fg4, gui = "bold" },
+	Comment = { fg = C.fg5, gui = "italic" },
+	CommentBold = { fg = C.fg5, gui = "bold" },
+	SpecialComment = { fg = C.fg4, gui = "bold" },
 
 	--Macro = { fg = c.aubergine },
-	Define = { fg = c.purple },
+	Define = { fg = C.purple },
 	--Include = { fg = c.aubergine },
-	PreProc = { fg = c.purple, gui = "bold" },
+	PreProc = { fg = C.purple, gui = "bold" },
 	--PreCondit = { fg = c.purple, gui = "bold" },
 
-	Label = { fg = c.green3 },
+	Label = { fg = C.green3 },
 	--Repeat = { fg = c.aubergine },
-	Keyword = { fg = c.purple },
-	Operator = { fg = c.purple },
+	Keyword = { fg = C.purple },
+	Operator = { fg = C.purple },
 	--Delimiter = { fg = c.base3 },
-	Statement = { fg = c.purple },
+	Statement = { fg = C.purple },
 	--Exception = { fg = c.aubergine },
-	Conditional = { fg = c.purple },
+	Conditional = { fg = C.purple },
 
 	--Variable = { fg = c.base2 },
 	--VariableBuiltin = { fg = c.sky, gui = "bold" },
 	--Constant = { fg = c.turquoise, gui = "bold" },
 
-	Number = { fg = c.orange },
-	Float = { fg = c.orange },
+	Number = { fg = C.orange },
+	Float = { fg = C.orange },
 	--Boolean = { fg = c.orange },
 	--Enum = { fg = c.orange },
 
-	Character = { fg = c.orange, gui = "bold" },
+	Character = { fg = C.orange, gui = "bold" },
 	--SpecialChar = { fg = c.orange, gui = "bold" },
 
-	String = { fg = c.str },
+	String = { fg = C.str },
 	--StringDelimiter = { fg = c.green2 },
 
-	Special = { fg = c.fg },
+	Special = { fg = C.fg },
 	--SpecialBold = { fg = c.aubergine, gui = "bold" },
 
 	--Field = { fg = c.aubergine },
 	--Argument = { fg = c.base3 },
 	--Attribute = { fg = c.base3 },
-	Identifier = { fg = c.fg, gui = "italic" },
+	Identifier = { fg = C.fg, gui = "italic" },
 	--Property = { fg = c.purple },
-	Function = { fg = c.green },
+	Function = { fg = C.green },
 	--FunctionBuiltin = { fg = c.sky, gui = "bold" },
 	--KeywordFunction = { fg = c.sky, gui = "italic" },
 	--Method = { fg = c.aubergine },
 
-	Type = { fg = c.yellow },
+	Type = { fg = C.yellow },
 	--TypeBuiltin = { fg = c.leaf, gui = "bold" },
-	StorageClass = { fg = c.yellow, gui = "italic" },
+	StorageClass = { fg = C.yellow, gui = "italic" },
 	--Class = { fg = c.base4 },
 	--Structure = { fg = c.purple },
 	--Typedef = { fg = c.base2 },
@@ -147,15 +147,15 @@ local search_high_ui = {
 	Search = { gui = "underline" },
 	--Substitute = { fg = c.aubergine, gui = "strikethrough,bold" },
 	--IncSearch = { bg = utils.Mix(c.turquoise, c.base8, 0.5), gui = "bold" },
-	IncSearch = { fg = c.bg, bg = c.base1 },
+	IncSearch = { fg = C.bg, bg = C.base1 },
 	--IncSearchCursor = { gui = "reverse" },
 
 	--Conceal = { fg = c.base6, gui = "none" },
 	--SpecialKey = { fg = c.fg2, gui = "bold" },
-	SpecialKey = { fg = c.fg2, bg = c.bg2 },
-	NonText = { fg = c.bg4, bg = c.bg },
+	SpecialKey = { fg = C.fg2, bg = C.bg2 },
+	NonText = { fg = C.bg4, bg = C.bg },
 	--MatchParen = { fg = c.base1, bg = c.base5, gui = "bold" },
-	MatchParen = { fg = c.red, gui = "underline" },
+	MatchParen = { fg = C.red, gui = "underline" },
 	--Whitespace = { fg = c.base5 },
 
 	--Highlight = { bg = c.sap },
@@ -164,8 +164,8 @@ local search_high_ui = {
 	--Question = { fg = c.turquoise, gui = "bold" },
 
 	--File = { fg = c.base4 },
-	Directory = { fg = c.orange },
-	Title = { fg = c.fg, gui = "bold" },
+	Directory = { fg = C.orange },
+	Title = { fg = C.fg, gui = "bold" },
 
 	Bold = { gui = "bold" },
 	--Emphasis = { fg = c.turquoise, gui = "bold" },
@@ -174,14 +174,14 @@ utils.apply_highlight(search_high_ui)
 
 -- Text levels
 local text_colors = {
-	Normal = c.fg,
-	Info = c.pink,
-	Success = c.green,
-	Warning = c.copper,
-	Debug = c.orange,
-	Error = c.red,
-	Special = c.purple,
-	Muted = c.fg5,
+	Normal = C.fg,
+	Info = C.pink,
+	Success = C.green,
+	Warning = C.copper,
+	Debug = C.orange,
+	Error = C.red,
+	Special = C.purple,
+	Muted = C.fg5,
 }
 
 for key, _ in pairs(text_colors) do
@@ -209,34 +209,34 @@ utils.high_link("Todo", "TextWarningBold")
 -- Diff
 local diff = {
 	-- todo: check diff text in diff line again
-	diffLine = { fg = c.fg, bg = c.purple2 },
-	diffSubName = { fg = c.fg, bg = c.purple2 },
+	diffLine = { fg = C.fg, bg = C.purple2 },
+	diffSubName = { fg = C.fg, bg = C.purple2 },
 
-	DiffAdd = { bg = utils.Mix(c.green, c.bg2, 0.9) },
-	DiffChange = { bg = utils.Mix(c.orange, c.bg2, 0.9) },
-	DiffText = { fg = c.copper },
-	DiffDelete = { bg = utils.Mix(c.red, c.bg2, 0.9) },
+	DiffAdd = { bg = utils.Mix(C.green, C.bg2, 0.9) },
+	DiffChange = { bg = utils.Mix(C.orange, C.bg2, 0.9) },
+	DiffText = { fg = C.copper },
+	DiffDelete = { bg = utils.Mix(C.red, C.bg2, 0.9) },
 
 	DiffAdded = {
-		fg = utils.Mix(c.green, c.bg2, 0.9),
-		bg = utils.Mix(c.green, c.bg2, 0.9),
+		fg = utils.Mix(C.green, C.bg2, 0.9),
+		bg = utils.Mix(C.green, C.bg2, 0.9),
 	},
 	DiffModified = {
-		fg = c.base1,
-		bg = utils.Mix(c.copper, c.bg2, 0.8),
+		fg = C.base1,
+		bg = utils.Mix(C.copper, C.bg2, 0.8),
 	},
 	DiffRemoved = {
-		fg = utils.Mix(c.red, c.bg2, 0.9),
-		bg = utils.Mix(c.red, c.bg2, 0.9),
+		fg = utils.Mix(C.red, C.bg2, 0.9),
+		bg = utils.Mix(C.red, C.bg2, 0.9),
 	},
 
-	DiffAddedGutter = { fg = c.green, gui = "bold" },
-	DiffModifiedGutter = { fg = c.copper, gui = "bold" },
-	DiffRemovedGutter = { fg = c.red, gui = "bold" },
+	DiffAddedGutter = { fg = C.green, gui = "bold" },
+	DiffModifiedGutter = { fg = C.copper, gui = "bold" },
+	DiffRemovedGutter = { fg = C.red, gui = "bold" },
 
-	DiffAddedGutterLineNr = { fg = c.green },
-	DiffModifiedGutterLineNr = { fg = c.copper },
-	DiffRemovedGutterLineNr = { fg = c.red },
+	DiffAddedGutterLineNr = { fg = C.green },
+	DiffModifiedGutterLineNr = { fg = C.copper },
+	DiffRemovedGutterLineNr = { fg = C.red },
 }
 utils.high_clear("DiffAdd")
 utils.high_clear("DiffChange")
