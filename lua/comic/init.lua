@@ -10,7 +10,7 @@ local utils = require("comic.utils")
 C = colors.Dark
 C.base1 = C.purple
 C.base2 = C.green
-C.str = C.str
+C.str = C.green2
 if vim.opt.background:get() == "light" then
 	C = colors.Light
 end
@@ -71,8 +71,8 @@ utils.high_link("Normal", "EndOfBuffer")
 -- Main Syntax
 local main_syntax = {
 	Tag = { fg = C.purple, gui = "bold" },
-	--Link = { fg = c.base1, sp = 'undercurl' },
-	--URL = { fg = c.base1, sp = 'undercurl' },
+	--Link = { fg = C.str, sp = "undercurl" },
+	URL = { fg = C.str, sp = "undercurl" },
 	Underlined = { sp = "underline" },
 
 	Comment = { fg = C.fg5, gui = "italic" },
@@ -89,22 +89,22 @@ local main_syntax = {
 	--Repeat = { fg = c.aubergine },
 	Keyword = { fg = C.purple },
 	Operator = { fg = C.purple },
-	--Delimiter = { fg = c.base3 },
+	Delimiter = { fg = C.fg3 },
 	Statement = { fg = C.purple },
-	--Exception = { fg = c.aubergine },
+	--Exception = { fg = C.red },
 	Conditional = { fg = C.purple },
 
-	--Variable = { fg = c.base2 },
-	--VariableBuiltin = { fg = c.sky, gui = "bold" },
-	--Constant = { fg = c.turquoise, gui = "bold" },
+	Variable = { fg = C.base2 },
+	VariableBuiltin = { fg = C.base2, gui = "bold" },
+	Constant = { fg = C.base, gui = "bold" },
 
 	Number = { fg = C.orange },
 	Float = { fg = C.orange },
-	--Boolean = { fg = c.orange },
-	--Enum = { fg = c.orange },
+	--Boolean = { fg = C.orange },
+	--Enum = { fg = C.orange },
 
 	Character = { fg = C.orange, gui = "bold" },
-	--SpecialChar = { fg = c.orange, gui = "bold" },
+	--SpecialChar = { fg = C.red, gui = "bold" },
 
 	String = { fg = C.str },
 	--StringDelimiter = { fg = c.green2 },
@@ -113,21 +113,21 @@ local main_syntax = {
 	--SpecialBold = { fg = c.aubergine, gui = "bold" },
 
 	--Field = { fg = c.aubergine },
-	--Argument = { fg = c.base3 },
-	--Attribute = { fg = c.base3 },
-	Identifier = { fg = C.fg, gui = "italic" },
-	--Property = { fg = c.purple },
-	Function = { fg = C.green },
-	--FunctionBuiltin = { fg = c.sky, gui = "bold" },
-	--KeywordFunction = { fg = c.sky, gui = "italic" },
-	--Method = { fg = c.aubergine },
+	--Argument = { fg = C.purple },
+	--Attribute = { fg = C.purple },
+	Identifier = { fg = C.fg4, gui = "italic" },
+	Property = { fg = C.purple },
+	Function = { fg = C.fg },
+	--FunctionBuiltin = { fg = C.purple, gui = "bold" },
+	--KeywordFunction = { fg = C.purple, gui = "italic" },
+	--Method = { fg = C.green2 },
 
 	Type = { fg = C.yellow },
-	--TypeBuiltin = { fg = c.leaf, gui = "bold" },
-	StorageClass = { fg = C.yellow, gui = "italic" },
-	--Class = { fg = c.base4 },
-	--Structure = { fg = c.purple },
-	--Typedef = { fg = c.base2 },
+	--TypeBuiltin = { fg = C.green2, gui = "bold" },
+	--StorageClass = { fg = C.green2, gui = "italic" },
+	--Class = { fg = C.green2 },
+	Structure = { fg = C.green },
+	--Typedef = { fg = C.purple },
 
 	--Regexp = { fg = c.gold },
 	--RegexpSpecial = { fg = c.gold },
