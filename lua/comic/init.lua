@@ -333,3 +333,28 @@ utils.high_link("LspSagaSignatureHelpBorder", "Bold")
 utils.high_link("LspSagaCodeActionBorder", "Bold")
 utils.high_link("LspSagaDefPreviewBorder", "Bold")
 utils.high_link("LspLinesDiagBorder", "Bold")
+
+-- NvimTree
+local nvim_tree = {
+	NvimTreeNormal = { fg = C.fg3 },
+	NvimTreeFolderName = { fg = C.fg },
+	NvimTreeFolderIcon = { fg = C.fg5 },
+	NvimTreeRootFolder = { fg = C.base1 },
+	NvimTreeEmptyFolderName = { fg = C.fg5, gui = "bold" },
+	--NvimTreeSymlink = { fg = C.base1, gui = "underline" },
+	NvimTreeExecFile = { fg = C.red, gui = "bold" },
+	NvimTreeImageFile = { fg = C.red },
+	NvimTreeOpenedFile = { fg = C.base2 },
+	NvimTreeSpecialFile = { gui = "underline" },
+	--NvimTreeMarkdownFile = { fg = C.base1, gui = "underline" },
+}
+
+utils.apply_highlight(nvim_tree)
+utils.high_link("NvimTreeGitDirty", "DiffModifiedGutter")
+utils.high_link("NvimTreeGitStaged", "DiffModifiedGutter")
+utils.high_link("NvimTreeGitMerge", "DiffModifiedGutter")
+utils.high_link("NvimTreeGitRenamed", "DiffModifiedGutter")
+utils.high_link("NvimTreeGitNew", "DiffAddedGutter")
+utils.high_link("NvimTreeGitDeleted", "DiffRemovedGutter")
+utils.high_link("NvimTreeIndentMarker", "IndentGuide")
+utils.high_link("NvimTreeOpenedFolderName", "NvimTreeOpenedFile")
