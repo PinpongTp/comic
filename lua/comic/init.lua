@@ -125,7 +125,8 @@ for key, _ in pairs(text_colors) do
 	})
 end
 
-utils.high_link("Msg", "TextSuccess")
+--utils.high_link("Msg", "TextSuccess")
+utils.high_link("Msg", "TextSpecial")
 utils.high_link("MoreMsg", "TextInfo")
 utils.high_link("WarningMsg", "TextWarning")
 utils.high_link("Error", "TextError")
@@ -154,7 +155,7 @@ local main_syntax = {
 	--Repeat = { fg = c.aubergine },
 	Keyword = { fg = C.purple },
 	Operator = { fg = C.purple },
-	Delimiter = { fg = C.fg3 },
+	Delimiter = { fg = C.fg2 },
 	Statement = { fg = C.purple },
 	--Exception = { fg = C.red },
 	Conditional = { fg = C.purple },
