@@ -68,6 +68,71 @@ local general_ui = {
 utils.apply_highlight(general_ui)
 utils.high_link("Normal", "EndOfBuffer")
 
+-- Search, Highlight. Conceal, Messages
+local search_high_ui = {
+	--Search = { bg = utils.Mix(c.turquoise, c.base8, 0.7), gui = "bold" },
+	Search = { gui = "underline" },
+	--Substitute = { fg = c.aubergine, gui = "strikethrough,bold" },
+	--IncSearch = { bg = utils.Mix(c.turquoise, c.base8, 0.5), gui = "bold" },
+	IncSearch = { fg = C.bg, bg = C.base1 },
+	--IncSearchCursor = { gui = "reverse" },
+
+	--Conceal = { fg = c.base6, gui = "none" },
+	--SpecialKey = { fg = c.fg2, gui = "bold" },
+	SpecialKey = { fg = C.fg2, bg = C.bg2 },
+	NonText = { fg = C.bg4, bg = C.bg },
+	--MatchParen = { fg = c.base1, bg = c.base5, gui = "bold" },
+	MatchParen = { fg = C.red, gui = "underline" },
+	--Whitespace = { fg = c.base5 },
+
+	--Highlight = { bg = c.sap },
+	--HighlightSubtle = { bg = c.base6 },
+
+	--Question = { fg = c.turquoise, gui = "bold" },
+
+	--File = { fg = c.base4 },
+	Directory = { fg = C.orange },
+	Title = { fg = C.fg, gui = "bold" },
+
+	Bold = { gui = "bold" },
+	--Emphasis = { fg = c.turquoise, gui = "bold" },
+}
+utils.apply_highlight(search_high_ui)
+
+-- Text levels
+local text_colors = {
+	Normal = C.fg,
+	Info = C.pink,
+	Success = C.green,
+	Warning = C.copper,
+	Debug = C.orange,
+	Error = C.red,
+	Special = C.purple,
+	Muted = C.fg5,
+}
+
+for key, _ in pairs(text_colors) do
+	utils.apply_highlight({
+		["Text" .. key] = {
+			fg = text_colors[key],
+		},
+	})
+	utils.apply_highlight({
+		["Text" .. key .. "Bold"] = {
+			fg = text_colors[key],
+			gui = "bold",
+		},
+	})
+end
+
+utils.high_link("Msg", "TextSuccess")
+utils.high_link("MoreMsg", "TextInfo")
+utils.high_link("WarningMsg", "TextWarning")
+utils.high_link("Error", "TextError")
+utils.high_link("ErrorMsg", "TextError")
+utils.high_link("ModeMsg", "TextSpecial")
+utils.high_link("Todo", "TextWarningBold")
+
 -- Main Syntax
 local main_syntax = {
 	Tag = { fg = C.purple, gui = "bold" },
@@ -140,71 +205,6 @@ utils.high_link("CommentURL", "URL")
 utils.high_link("CommentLabel", "CommentBold")
 utils.high_link("CommentSection", "CommentBold")
 utils.high_link("Noise", "Comment")
-
--- Search, Highlight. Conceal, Messages
-local search_high_ui = {
-	--Search = { bg = utils.Mix(c.turquoise, c.base8, 0.7), gui = "bold" },
-	Search = { gui = "underline" },
-	--Substitute = { fg = c.aubergine, gui = "strikethrough,bold" },
-	--IncSearch = { bg = utils.Mix(c.turquoise, c.base8, 0.5), gui = "bold" },
-	IncSearch = { fg = C.bg, bg = C.base1 },
-	--IncSearchCursor = { gui = "reverse" },
-
-	--Conceal = { fg = c.base6, gui = "none" },
-	--SpecialKey = { fg = c.fg2, gui = "bold" },
-	SpecialKey = { fg = C.fg2, bg = C.bg2 },
-	NonText = { fg = C.bg4, bg = C.bg },
-	--MatchParen = { fg = c.base1, bg = c.base5, gui = "bold" },
-	MatchParen = { fg = C.red, gui = "underline" },
-	--Whitespace = { fg = c.base5 },
-
-	--Highlight = { bg = c.sap },
-	--HighlightSubtle = { bg = c.base6 },
-
-	--Question = { fg = c.turquoise, gui = "bold" },
-
-	--File = { fg = c.base4 },
-	Directory = { fg = C.orange },
-	Title = { fg = C.fg, gui = "bold" },
-
-	Bold = { gui = "bold" },
-	--Emphasis = { fg = c.turquoise, gui = "bold" },
-}
-utils.apply_highlight(search_high_ui)
-
--- Text levels
-local text_colors = {
-	Normal = C.fg,
-	Info = C.pink,
-	Success = C.green,
-	Warning = C.copper,
-	Debug = C.orange,
-	Error = C.red,
-	Special = C.purple,
-	Muted = C.fg5,
-}
-
-for key, _ in pairs(text_colors) do
-	utils.apply_highlight({
-		["Text" .. key] = {
-			fg = text_colors[key],
-		},
-	})
-	utils.apply_highlight({
-		["Text" .. key .. "Bold"] = {
-			fg = text_colors[key],
-			gui = "bold",
-		},
-	})
-end
-
-utils.high_link("Msg", "TextSuccess")
-utils.high_link("MoreMsg", "TextInfo")
-utils.high_link("WarningMsg", "TextWarning")
-utils.high_link("Error", "TextError")
-utils.high_link("ErrorMsg", "TextError")
-utils.high_link("ModeMsg", "TextSpecial")
-utils.high_link("Todo", "TextWarningBold")
 
 -- Diff
 local diff = {
