@@ -41,14 +41,14 @@ local general_ui = {
 	CursorLineNr = { fg = C.green2 },
 	CursorColumn = { bg = C.bg },
 
-	--Folded = { fg = C.red, bg = C.bg },
+	Folded = { bg = C.bg3 },
 	FoldColumn = { fg = C.fg5, bg = C.bg },
 	SignColumn = { fg = C.fg5, bg = C.bg },
 	ColorColumn = { bg = C.bg },
 
-	--IndentGuide = { fg = c.base6 },
-	--IndentGuideEven = { fg = c.base6 },
-	--IndentGuideOdd = { fg = c.base6 },
+	IndentGuide = { fg = C.bg4 },
+	IndentGuideEven = { fg = C.bg4 },
+	IndentGuideOdd = { fg = C.fg5 },
 
 	StatusLine = { fg = C.fg2, bg = C.bg3 },
 	--StatusLineNC = { fg = c.base5, bg = c.base7 },
