@@ -145,7 +145,7 @@ local main_syntax = {
 
 	--Macro = { fg = c.aubergine },
 	Define = { fg = C.purple },
-	--Include = { fg = c.aubergine },
+	Include = { fg = C.purple },
 	PreProc = { fg = C.purple, gui = "bold" },
 	--PreCondit = { fg = c.purple, gui = "bold" },
 
@@ -155,7 +155,7 @@ local main_syntax = {
 	Operator = { fg = C.purple },
 	Delimiter = { fg = C.fg2 },
 	Statement = { fg = C.purple },
-	--Exception = { fg = C.red },
+	Exception = { fg = C.red },
 	Conditional = { fg = C.purple },
 
 	Variable = { fg = C.base2 },
@@ -177,21 +177,21 @@ local main_syntax = {
 	--SpecialBold = { fg = C.red, gui = "bold" },
 
 	--Field = { fg = C.red },
-	--Argument = { fg = C.purple },
-	--Attribute = { fg = C.purple },
+	--Argument = { fg = C.red },
+	--Attribute = { fg = C.red },
 	Identifier = { fg = C.fg4, gui = "italic" },
 	Property = { fg = C.purple },
 	Function = { fg = C.fg },
-	--FunctionBuiltin = { fg = C.purple, gui = "bold" },
-	--KeywordFunction = { fg = C.purple, gui = "italic" },
-	--Method = { fg = C.green2 },
+	--FunctionBuiltin = { fg = C.red, gui = "bold" },
+	--KeywordFunction = { fg = C.red, gui = "italic" },
+	--Method = { fg = C.red },
 
 	Type = { fg = C.yellow },
-	--TypeBuiltin = { fg = C.green2, gui = "bold" },
-	--StorageClass = { fg = C.green2, gui = "italic" },
-	--Class = { fg = C.green2 },
+	--TypeBuiltin = { fg = C.red, gui = "bold" },
+	--StorageClass = { fg = C.red, gui = "italic" },
+	--Class = { fg = C.red },
 	Structure = { fg = C.green },
-	--Typedef = { fg = C.purple },
+	Typedef = { fg = C.purple },
 
 	--Regexp = { fg = c.gold },
 	--RegexpSpecial = { fg = c.gold },
@@ -356,3 +356,8 @@ utils.high_link("NvimTreeGitNew", "DiffAddedGutter")
 utils.high_link("NvimTreeGitDeleted", "DiffRemovedGutter")
 utils.high_link("NvimTreeIndentMarker", "IndentGuide")
 utils.high_link("NvimTreeOpenedFolderName", "NvimTreeOpenedFile")
+
+utils.high_link("@type", "Structure")
+utils.high_link("@type.builtin", "Type")
+utils.high_link("@type.definition", "ErrorMsg")
+utils.high_link("@type.qualifier", "Keyword")
