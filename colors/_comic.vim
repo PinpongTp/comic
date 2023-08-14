@@ -44,13 +44,13 @@ let s:warning2="#e27e36"
 "exe 'hi LineNr guifg='s:bg3' guibg='s:bg
 "exe 'hi CursorLineNr guifg='s:fg' guibg='s:bg2
 "exe 'hi VertSplit guifg='s:bg2' guibg='s:bg
-exe 'hi MatchParen guifg='s:warning2'  gui=underline'
+"exe 'hi MatchParen guifg='s:warning2'  gui=underline'
 "exe 'hi StatusLine guifg='s:fg2' guibg='s:bg3' gui=bold'
 "exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
 exe 'hi PmenuSel  guibg='s:bg3
-exe 'hi IncSearch guifg='s:bg' guibg='s:keyword
+"exe 'hi IncSearch guifg='s:bg' guibg='s:keyword
 exe 'hi Search   gui=underline'
-exe 'hi Directory guifg='s:const
+"exe 'hi Directory guifg='s:const
 exe 'hi Folded guifg='s:fg4' guibg='s:bg
 "exe 'hi WildMenu guifg='s:str' guibg='s:bg
 
@@ -70,21 +70,21 @@ exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2
 "exe 'hi Float guifg='s:const
 "exe 'hi Function guifg='s:func
 "exe 'h Identifier guifg='s:fg'  gui=italic'
-"exe 'hi Keyword guifg='s:keyword'  gui=bold'
+"exe 'h Keyword guifg='s:keyword'  gui=bold'
 "exe 'hi Label guifg='s:var
-exe 'hi NonText guifg='s:bg4' guibg='s:bg
+"exe 'hi NonText guifg='s:bg4' guibg='s:bg
 "exe 'hi Number guifg='s:const
 "exe 'hi Operator guifg='s:keyword
 "exe 'hi PreProc guifg='s:keyword
 exe 'hi Special guifg='s:fg
-exe 'hi SpecialKey guifg='s:fg2' guibg='s:bg2
+"exe 'hi SpecialKey guifg='s:fg2' guibg='s:bg2
 "exe 'hi Statement guifg='s:keyword
-exe 'hi StorageClass guifg='s:type'  gui=italic'
+"exe 'hi StorageClass guifg='s:type'  gui=italic'
 exe 'hi String guifg='s:str
 "exe 'hi Tag guifg='s:keyword
-exe 'hi Title guifg='s:fg'  gui=bold'
+"exe 'hi Title guifg='s:fg'  gui=bold'
 exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
-exe 'hi Type guifg='s:type
+"exe 'hi Type guifg='s:type
 exe 'hi Underlined   gui=underline'
 
 " Neovim Terminal Mode
