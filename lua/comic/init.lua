@@ -182,7 +182,7 @@ local main_syntax = {
 	Identifier = { fg = C.fg, gui = "italic" },
 	Property = { fg = C.fg }, -- todo
 	Function = { fg = C.fg },
-	FunctionBuiltin = { fg = C.red, gui = "bold" },
+	FunctionBuiltin = { fg = C.fg, gui = "bold" },
 	KeywordFunction = { fg = C.red, gui = "italic" },
 	Method = { fg = C.red },
 
@@ -362,8 +362,8 @@ utils.high_link("@type.builtin", "Type")
 utils.high_link("@type.definition", "ErrorMsg")
 utils.high_link("@type.qualifier", "Keyword")
 
-utils.high_link("@function", "ErrorMsg")
-utils.high_link("@function.builtin", "ErrorMsg")
+utils.high_link("@function", "Function")
+utils.high_link("@function.builtin", "FunctionBuiltin")
 utils.high_link("@function.call", "VariableBuiltin") -- @get
 utils.high_link("@function.macro", "VariableBuiltin")
 
