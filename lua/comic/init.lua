@@ -184,7 +184,7 @@ local main_syntax = {
 	Function = { fg = C.fg },
 	FunctionBuiltin = { fg = C.fg, gui = "bold" },
 	KeywordFunction = { fg = C.red, gui = "italic" },
-	Method = { fg = C.green3 },
+	Method = { fg = C.green4 },
 
 	Type = { fg = C.yellow },
 	TypeBuiltin = { fg = C.red, gui = "bold" },
