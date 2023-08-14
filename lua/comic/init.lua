@@ -155,7 +155,7 @@ local main_syntax = {
 	Operator = { fg = C.purple },
 	Delimiter = { fg = C.fg2 },
 	Statement = { fg = C.purple },
-	Exception = { fg = C.red },
+	Exception = { fg = C.base1 },
 	Conditional = { fg = C.purple },
 
 	Variable = { fg = C.fg3 }, -- todo
