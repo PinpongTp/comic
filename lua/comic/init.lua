@@ -184,7 +184,7 @@ local main_syntax = {
 	Function = { fg = C.fg },
 	FunctionBuiltin = { fg = C.fg, gui = "bold" },
 	KeywordFunction = { fg = C.red, gui = "italic" },
-	Method = { fg = C.red },
+	Method = { fg = C.green3 },
 
 	Type = { fg = C.yellow },
 	TypeBuiltin = { fg = C.red, gui = "bold" },
@@ -361,6 +361,7 @@ utils.high_link("@type", "Structure")
 utils.high_link("@type.builtin", "Type")
 utils.high_link("@type.definition", "ErrorMsg")
 utils.high_link("@type.qualifier", "Keyword")
+utils.high_link("@Constant", "Constant")
 
 utils.high_link("@function", "Function")
 utils.high_link("@function.builtin", "FunctionBuiltin")
@@ -374,3 +375,7 @@ utils.high_link("@attribute", "Attribute")
 utils.high_link("@property", "Property")
 utils.high_link("@variable.builtin", "VariableBuiltin") -- test
 utils.high_link("@symbol", "ErrorMsg")
+
+utils.high_link("@Method", "Method")
+utils.high_link("@Method.call", "Method")
+utils.high_link("@Function.call", "Method")
