@@ -243,3 +243,17 @@ utils.high_clear("DiffChange")
 utils.high_clear("DiffText")
 utils.high_clear("DiffDelete")
 utils.apply_highlight(diff)
+
+-- Markdown
+--[[local markdown = {
+	markdownCode = { bg = C.bg4 },
+	markdownCodeBlock = { bg = C.bg4 },
+	markdownH1 = { fg = C.base1, gui = "bold" },
+	markdownH2 = { fg = C.base1, gui = "bold" },
+	markdownH3 = { fg = C.base1, gui = "bold" },
+	markdownH4 = { fg = C.base1, gui = "bold" },
+	markdownH5 = { fg = C.base1, gui = "bold" },
+	markdownH6 = { fg = C.base1, gui = "bold" },
+	markdownLinkText = { gui = "underline" },
+}
+utils.apply_highlight(markdown)]]
