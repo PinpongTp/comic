@@ -257,3 +257,78 @@ utils.apply_highlight(diff)
 	markdownLinkText = { gui = "underline" },
 }
 utils.apply_highlight(markdown)]]
+
+-- LSP
+local msg_underline = {
+	ErrorMsgUnderline = { fg = C.red, sp = "undercurl" },
+	WarningMsgUnderline = { fg = C.copper, sp = "undercurl" },
+	MoreMsgUnderline = { fg = C.base1, sp = "undercurl" },
+	MsgUnderline = { fg = C.base1, sp = "undercurl" },
+}
+
+utils.apply_highlight(msg_underline)
+utils.high_link("LspDiagnosticsFloatingError", "ErrorMsg")
+utils.high_link("LspDiagnosticsFloatingWarning", "Warning")
+utils.high_link("LspDiagnosticsFloatingInformation", "MoreMsg")
+utils.high_link("LspDiagnosticsFloatingHint", "Msg")
+utils.high_link("LspDiagnosticsDefaultError", "ErrorMsg")
+utils.high_link("LspDiagnosticsDefaultWarning", "WarningMsg")
+utils.high_link("LspDiagnosticsDefaultInformation", "MoreMsg")
+utils.high_link("LspDiagnosticsDefaultHint", "Msg")
+utils.high_link("LspDiagnosticsVirtualTextError", "ErrorMsg")
+utils.high_link("LspDiagnosticsVirtualTextWarning", "WarningMsg")
+utils.high_link("LspDiagnosticsVirtualTextInformation", "MoreMsg")
+utils.high_link("LspDiagnosticsVirtualTextHint", "Msg")
+utils.high_link("LspDiagnosticsUnderlineError", "ErrorMsgUnderline")
+utils.high_link("LspDiagnosticsUnderlineWarning", "WarningMsgUnderline")
+utils.high_link("LspDiagnosticsUnderlineInformation", "MoreMsgUnderline")
+utils.high_link("LspDiagnosticsUnderlineHint", "MsgUnderline")
+utils.high_link("LspDiagnosticsSignError", "ErrorMsg")
+utils.high_link("LspDiagnosticsSignWarning", "WarningMsg")
+utils.high_link("LspDiagnosticsSignInformation", "MoreMsg")
+utils.high_link("LspDiagnosticsSignHint", "Msg")
+utils.high_link("LspReferenceText", "Bold")
+utils.high_link("LspReferenceRead", "Bold")
+utils.high_link("LspReferenceWrite", "Bold")
+utils.high_link("TermCursor", "Cursor")
+utils.high_link("healthError", "ErrorMsg")
+utils.high_link("healthSuccess", "Msg")
+utils.high_link("healthWarning", "WarningMsg")
+
+-- LspSaga
+local lspsaga = {
+	SagaShadow = { bg = C.red },
+	LspSagaDiagnosticHeader = { fg = C.red },
+}
+utils.apply_highlight(lspsaga)
+utils.high_link("LspSagaDiagnosticBorder", "Normal")
+utils.high_link("LspSagaDiagnosticTruncateLine", "Normal")
+utils.high_link("LspFloatWinBorder", "Normal")
+utils.high_link("LspSagaBorderTitle", "Title")
+utils.high_link("TargetWord", "Error")
+utils.high_link("ReferencesCount", "Title")
+utils.high_link("ReferencesIcon", "Special")
+utils.high_link("DefinitionCount", "Title")
+utils.high_link("TargetFileName", "Comment")
+utils.high_link("DefinitionIcon", "Special")
+utils.high_link("ProviderTruncateLine", "Normal")
+utils.high_link("LspSagaFinderSelection", "Sear")
+utils.high_link("DiagnosticTruncateLine", "Normal")
+utils.high_link("DiagnosticError", "LspDiagnosticsDefaultError")
+utils.high_link("DiagnosticWarning", "LspDiagnosticsDefaultWarning")
+utils.high_link("DiagnosticInformation", "LspDiagnosticsDefaultInformation")
+utils.high_link("DiagnosticHint", "LspDiagnosticsDefaultHint")
+utils.high_link("DefinitionPreviewTitle", "Title")
+utils.high_link("LspSagaShTruncateLine", "Normal")
+utils.high_link("LspSagaDocTruncateLine", "Normal")
+utils.high_link("LineDiagTuncateLine", "Normal")
+utils.high_link("LspSagaCodeActionTitle", "Title")
+utils.high_link("LspSagaCodeActionTruncateLine", "Normal")
+utils.high_link("LspSagaCodeActionContent", "Normal")
+utils.high_link("LspSagaRenamePromptPrefix", "Normal")
+utils.high_link("LspSagaRenameBorder", "Bold")
+utils.high_link("LspSagaHoverBorder", "Bold")
+utils.high_link("LspSagaSignatureHelpBorder", "Bold")
+utils.high_link("LspSagaCodeActionBorder", "Bold")
+utils.high_link("LspSagaDefPreviewBorder", "Bold")
+utils.high_link("LspLinesDiagBorder", "Bold")
