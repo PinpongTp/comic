@@ -10,6 +10,7 @@ local utils = require("comic.utils")
 C = colors.Dark
 C.base1 = C.purple
 C.base2 = C.green
+C.base3 = C.yellow
 C.str = C.green2
 if vim.opt.background:get() == "light" then
 	C = colors.Light
@@ -35,7 +36,7 @@ local general_ui = {
 	VisualBold = { bg = C.base1, gui = "bold" },
 
 	LineNr = { fg = C.bg3, bg = C.bg },
-	Cursor = { bg = C.yellow },
+	Cursor = { bg = C.base3 },
 	CursorLine = { bg = C.bg2 },
 	CursorLineNr = { fg = C.green2 },
 	CursorColumn = { bg = C.bg },
@@ -81,8 +82,7 @@ local search_high_ui = {
 	--SpecialKey = { fg = c.fg2, gui = "bold" },
 	SpecialKey = { fg = C.fg2, bg = C.bg2 },
 	NonText = { fg = C.bg4, bg = C.bg },
-	--MatchParen = { fg = c.base1, bg = c.base5, gui = "bold" },
-	MatchParen = { fg = C.red, gui = "underline" },
+	MatchParen = { fg = C.base3, gui = "boldunderline" },
 	--Whitespace = { fg = c.base5 },
 
 	--Highlight = { bg = c.sap },
