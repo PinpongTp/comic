@@ -31,8 +31,8 @@ local general_ui = {
 	--PmenuSbar = { fg = c.base2, bg = c.base7 },
 	--PmenuThumb = { bg = c.base4 },
 
-	--Visual = { bg = utils.Mix(c.sap, c.base8, 0.6) },
-	--VisualBold = { bg = c.sap, gui = "bold" },
+	Visual = { bg = utils.Mix(C.base1, C.bg, 0.6) },
+	VisualBold = { bg = C.base1, gui = "bold" },
 
 	LineNr = { fg = C.bg3, bg = C.bg },
 	Cursor = { bg = C.yellow },
@@ -40,7 +40,7 @@ local general_ui = {
 	CursorLineNr = { fg = C.green2 },
 	CursorColumn = { bg = C.bg },
 
-	--Folded = { fg = c.base5, bg = c.base4 },
+	--Folded = { fg = C.red, bg = C.bg },
 	FoldColumn = { fg = C.fg5, bg = C.bg },
 	SignColumn = { fg = C.fg5, bg = C.bg },
 	ColorColumn = { bg = C.bg },
@@ -107,12 +107,12 @@ local main_syntax = {
 	--SpecialChar = { fg = C.red, gui = "bold" },
 
 	String = { fg = C.str },
-	--StringDelimiter = { fg = c.green2 },
+	--StringDelimiter = { fg = C.red },
 
 	Special = { fg = C.fg },
-	--SpecialBold = { fg = c.aubergine, gui = "bold" },
+	--SpecialBold = { fg = C.red, gui = "bold" },
 
-	--Field = { fg = c.aubergine },
+	--Field = { fg = C.red },
 	--Argument = { fg = C.purple },
 	--Attribute = { fg = C.purple },
 	Identifier = { fg = C.fg4, gui = "italic" },
