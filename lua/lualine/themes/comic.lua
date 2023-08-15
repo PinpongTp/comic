@@ -8,28 +8,28 @@ end
 
 return {
 	normal = {
-		a = { fg = C.fg, bg = C.bg4, gui = "bold" },
+		a = { fg = C.fg, bg = C.fg5, gui = "bold" },
 		b = { fg = C.fg, bg = C.bg3 },
 		c = { fg = C.fg, bg = C.bg },
 	},
 	insert = {
-		a = { fg = C.fg, bg = C.purple2, gui = "bold" },
-		b = { fg = C.fg, bg = C.bg },
+		a = { fg = C.fg, bg = C.base1, gui = "bold" },
+		b = { fg = C.fg, bg = C.bg3 },
 		c = { fg = C.fg, bg = C.bg },
 	},
 	visual = {
-		a = { fg = C.bg, bg = C.green2, gui = "bold" },
-		b = { fg = C.fg, bg = C.bg },
+		a = { fg = C.bg, bg = C.green, gui = "bold" },
+		b = { fg = C.fg, bg = C.bg3 },
 		c = { fg = C.fg, bg = C.bg },
 	},
 	replace = {
 		a = { fg = C.bg, bg = C.orange, gui = "bold" },
-		b = { fg = C.fg, bg = C.bg },
+		b = { fg = C.fg, bg = C.bg3 },
 		c = { fg = C.fg, bg = C.bg },
 	},
 	command = {
 		a = { fg = C.fg, bg = C.red, gui = "bold" },
-		b = { fg = C.fg, bg = C.bg },
+		b = { fg = C.fg, bg = C.bg3 },
 		c = { fg = C.fg, bg = C.bg },
 	},
 	inactive = {
