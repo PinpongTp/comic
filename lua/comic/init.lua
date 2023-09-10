@@ -24,6 +24,7 @@ end
 -- General UI
 local general_ui = {
 	Normal = { fg = C.fg, bg = C.bg },
+	Normal2 = { fg = C.fg5, bg = C.bg },
 
 	-- Dropdowns
 	Pmenu = { fg = C.fg, bg = C.bg2 },
@@ -122,7 +123,7 @@ for key, _ in pairs(text_colors) do
 	})
 end
 
---utils.high_link("Msg", "TextSuccess")
+--[[utils.high_link("Msg", "TextSuccess")]]
 utils.high_link("Msg", "TextSpecial")
 utils.high_link("MoreMsg", "TextInfo")
 utils.high_link("WarningMsg", "TextWarning")
@@ -378,3 +379,33 @@ utils.high_link("@symbol", "ErrorMsg")
 utils.high_link("@Method", "Method")
 utils.high_link("@Method.call", "Method")
 utils.high_link("@Function.call", "Method")
+
+-- navic
+utils.high_link("NavicIconsFile", "Normal2")
+utils.high_link("NavicIconsModule", "Normal2")
+utils.high_link("NavicIconsNamespace", "Normal2")
+utils.high_link("NavicIconsPackage", "Normal2")
+utils.high_link("NavicIconsClass", "Normal2")
+utils.high_link("NavicIconsMethod", "TextSuccess")
+utils.high_link("NavicIconsProperty", "Normal2")
+utils.high_link("NavicIconsField", "Normal2")
+utils.high_link("NavicIconsConstructor", "Normal2")
+utils.high_link("NavicIconsEnum", "Normal2")
+utils.high_link("NavicIconsInterface", "Normal2")
+utils.high_link("NavicIconsFunction", "TextSuccess")
+utils.high_link("NavicIconsVariable", "Normal2")
+utils.high_link("NavicIconsConstant", "Normal2")
+utils.high_link("NavicIconsString", "Normal2")
+utils.high_link("NavicIconsNumber", "Normal2")
+utils.high_link("NavicIconsBoolean", "Normal2")
+utils.high_link("NavicIconsArray", "Normal2")
+utils.high_link("NavicIconsObject", "Normal2")
+utils.high_link("NavicIconsKey", "Normal2")
+utils.high_link("NavicIconsNull", "Normal2")
+utils.high_link("NavicIconsEnumMember", "Normal2")
+utils.high_link("NavicIconsStruct", "Normal2")
+utils.high_link("NavicIconsEvent", "Normal2")
+utils.high_link("NavicIconsOperator", "Normal2")
+utils.high_link("NavicIconsTypeParameter", "Normal2")
+utils.high_link("NavicText", "Normal")
+utils.high_link("NavicSeparator", "Normal2")
