@@ -40,8 +40,7 @@ local general_ui = {
 	CursorLine = { bg = C.bg2 },
 	CursorLineNr = { fg = C.green2 },
 	CursorColumn = { bg = C.bg },
-
-	Folded = { bg = C.bg3 },
+	Folded = { bg = utils.Mix(C.bg2, C.bg, 0.4) },
 	FoldColumn = { fg = C.fg5, bg = C.bg },
 	SignColumn = { fg = C.fg5, bg = C.bg },
 	ColorColumn = { bg = C.bg },
@@ -211,22 +210,22 @@ local diff = {
 	diffLine = { fg = C.fg, bg = C.purple2 },
 	diffSubName = { fg = C.fg, bg = C.purple2 },
 
-	DiffAdd = { bg = utils.Mix(C.green, C.bg2, 0.9) },
-	DiffChange = { bg = utils.Mix(C.orange, C.bg2, 0.9) },
-	DiffText = { fg = C.copper },
-	DiffDelete = { bg = utils.Mix(C.red, C.bg2, 0.9) },
+	DiffAdd = { bg = utils.Mix(C.green4, C.bg, 0.8) },
+	DiffChange = { bg = utils.Mix(C.copper, C.bg, 0.95) },
+	DiffText = { bg = utils.Mix(C.copper, C.bg, 0.6) },
+	DiffDelete = { bg = utils.Mix(C.red, C.bg, 0.8) },
 
 	DiffAdded = {
-		fg = utils.Mix(C.green, C.bg2, 0.9),
-		bg = utils.Mix(C.green, C.bg2, 0.9),
+		fg = utils.Mix(C.green, C.bg, 0.9),
+		bg = utils.Mix(C.green, C.bg, 0.9),
 	},
 	DiffModified = {
 		fg = C.base1,
-		bg = utils.Mix(C.copper, C.bg2, 0.8),
+		bg = utils.Mix(C.copper, C.bg, 0.8),
 	},
 	DiffRemoved = {
-		fg = utils.Mix(C.red, C.bg2, 0.9),
-		bg = utils.Mix(C.red, C.bg2, 0.9),
+		fg = utils.Mix(C.red, C.bg, 0.9),
+		bg = utils.Mix(C.red, C.bg, 0.9),
 	},
 
 	DiffAddedGutter = { fg = C.green, gui = "bold" },
