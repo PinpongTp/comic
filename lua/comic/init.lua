@@ -208,8 +208,11 @@ utils.high_link("Noise", "Comment")
 -- Diff
 local diff = {
 	-- todo: check diff text in diff line again
-	diffLine = { fg = C.fg, bg = C.purple2 },
-	diffSubName = { fg = C.fg, bg = C.purple2 },
+
+	--diffLine = { fg = C.fg, bg = C.purple2 },
+	--diffSubName = { fg = C.fg, bg = C.purple2 },
+	diffLine = { fg = C.green3 },
+	diffSubName = { fg = C.fg },
 
 	DiffAdd = { bg = utils.Mix(C.green4, C.bg, 0.8) },
 	DiffChange = { bg = utils.Mix(C.copper, C.bg, 0.95) },
@@ -217,16 +220,17 @@ local diff = {
 	DiffDelete = { bg = utils.Mix(C.red, C.bg, 0.8) },
 
 	DiffAdded = {
-		fg = utils.Mix(C.green, C.bg, 0.9),
-		bg = utils.Mix(C.green, C.bg, 0.9),
+		fg = C.green,
+		--fg = C.fg,
+		--bg = utils.Mix(C.green, C.bg, 0.8),
 	},
 	DiffModified = {
-		fg = C.base1,
-		bg = utils.Mix(C.copper, C.bg, 0.8),
+		fg = C.copper,
+		--bg = utils.Mix(C.copper, C.bg, 0.95),
 	},
 	DiffRemoved = {
-		fg = utils.Mix(C.red, C.bg, 0.9),
-		bg = utils.Mix(C.red, C.bg, 0.9),
+		fg = C.red,
+		bg = utils.Mix(C.red, C.bg, 0.8),
 	},
 
 	DiffAddedGutter = { fg = C.green, gui = "bold" },
